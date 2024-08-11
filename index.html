@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play with these objects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      h1 {
+        font-size: 30vw;
+        font-family: "Major Mono Display", monospace;
+        color: rgb(12, 83, 158);
+        pointer-events: none;
+        letter-spacing: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -10vh;
+      }
+      canvas {
+        cursor: grab;
+      }
+      .drag {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        z-index: -10;
+        position: absolute;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="drag">
+      <h1>Drag</h1>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
